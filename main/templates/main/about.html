@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} About me page {% endblock %}
+
+{% block content%}
+<div class="features2"> 
+  <h3 class="about-me"> About me page </h3>
+  <p class="gr">This information is strictly confidential and restricted to authorized user.</p>
+  <p class="gr">Leave this page  immediately.</p>
+  <a href="{% url 'home' %}"><button type="button" class="btn btn-secondary">Main page</button></a>
+</div>
+{% endblock %}  
+

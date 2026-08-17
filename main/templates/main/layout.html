@@ -1,0 +1,30 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "main/css/main.css" %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/9839086d93.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <aside>
+      <img src="{% static 'main/img/Makoto_Blue_Bg.jpeg' %}" class="makoto" alt="OkBuddyPersona">
+      <span class="persona">Aka Kotsu</span>
+      <h4>Navigation</h4>
+      <ul>
+        <a href="{% url 'home' %}" class="main-link"><li><i class="fa-solid fa-house"></i>Main</li></a>
+        <a href="{% url 'about' %}" class="aboutme-link"><li><i class="fa-solid fa-user"></i></i>About me</li></a>
+        <a href="{% url 'news' %}"><li><i class="fa-solid fa-paper-plane"></i></i>News</li></a>
+        <a href="{% url 'contact' %}"><li><i class="fa-solid fa-phone"></i>Contact</li></a>
+        <a href="{% url 'create' %}"><li><button class="btn btn-outline-dark">Add article</button></li></a>
+    </aside>
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+  </body>
