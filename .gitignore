@@ -12,3 +12,5 @@ env/
 
 # IDE files
 .vscode/
+
+.env
